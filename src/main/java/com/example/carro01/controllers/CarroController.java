@@ -49,6 +49,7 @@ public class CarroController {
         carroExistente.setMarca(carroAtualizado.getMarca());
         carroExistente.setModelo(carroAtualizado.getModelo());
         carroExistente.setAno(carroAtualizado.getAno());
+        carroExistente.setProprietario(carroAtualizado.getProprietario());
         return carroRepository.save(carroExistente);
     }
 

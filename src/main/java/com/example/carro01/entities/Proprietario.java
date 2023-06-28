@@ -1,12 +1,9 @@
 package com.example.carro01.entities;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,17 +12,11 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Carro {
+public class Proprietario {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String marca;
-    private String modelo;
-    private Integer ano;
-
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "proprietario_id", referencedColumnName = "id")
-    private Proprietario proprietario;
-
+    private String nome;
+    private String endereco;
 }
