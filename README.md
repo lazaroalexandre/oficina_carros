@@ -28,3 +28,14 @@
     [LINUX] Execute o comando para rodar o projeto:
 
     mvn spring-boot:run
+
+
+# Endpoints 
+
+    - Carros:
+
+        GET: http://localhost:8080/carro/list
+        GET: http://localhost:8080/carro/detail/{id}
+        POST: http://localhost:8080/carro/create
+        PUT: http://localhost:8080/carro/update/{id}
+        DELETE: http://localhost:8080/carro/delete/{id}
