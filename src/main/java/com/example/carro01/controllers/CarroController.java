@@ -44,8 +44,7 @@ public class CarroController {
 
     @PutMapping("carro/update/{id}")
     public Carro updateCarro(@PathVariable Long id, @RequestBody Carro carroAtualizado) {
-        Carro carroExistente = carroRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Carro não encontrado"));
+        Carro carroExistente = carroRepository.findById(id).get();
         carroExistente.setMarca(carroAtualizado.getMarca());
         carroExistente.setModelo(carroAtualizado.getModelo());
         carroExistente.setAno(carroAtualizado.getAno());
