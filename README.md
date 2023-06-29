@@ -49,3 +49,12 @@
         PUT: http://localhost:8080/proprietario/update/{id}
         DELETE: http://localhost:8080/proprietario/delete/{id}
 
+    
+    - Revisoes:
+
+        GET: http://localhost:8080/revisao/list
+        GET: http://localhost:8080/revisao/{id}
+        POST: http://localhost:8080/revisao/create
+        PUT: http://localhost:8080/revisao/update/{id}
+        DELETE: http://localhost:8080/revisao/delete/{id}
+
